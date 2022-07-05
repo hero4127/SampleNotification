@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
                 NotificationManager nm = (NotificationManager) MainActivity.this
                         .getSystemService(Context.NOTIFICATION_SERVICE);
-                String NOTIFICATION_CHANNEL_ID = "tutorialspoint_01";
+                String NOTIFICATION_CHANNEL_ID = "sample";
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     @SuppressLint("WrongConstant") NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "My Notifications", NotificationManager.IMPORTANCE_MAX);
                     // Configure the notification channel.
@@ -56,11 +56,11 @@ public class MainActivity extends AppCompatActivity {
                         .setDefaults(Notification.DEFAULT_ALL)
                         .setWhen(System.currentTimeMillis())
                         .setSmallIcon(R.mipmap.ic_launcher)
-                        .setTicker("Tutorialspoint")
+                        .setTicker("Sample")
                         //.setPriority(Notification.PRIORITY_MAX)
                         .setContentTitle("sample notification")
                         .setContentText("This is sample notification")
-                        .setContentInfo("Information");
+                        .setContentInfo("Sample");
 
                 nm.notify(1, notificationBuilder.build());
             }
